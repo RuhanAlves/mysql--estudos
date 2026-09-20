@@ -127,7 +127,7 @@ inner join servidores on (servidores.id_servidor = jogadores.id_servidor)
 where regiao = 'Brasil';
 
 #Listagem do nickname, nível, nome do jogo e região de apenas aqueles jogadores que estão
-#no servidor de Brasil.
+#no servidor do Brasil.
 
 select nickname, moedas, nome_jogo from jogadores
 inner join servidores on (servidores.id_servidor = jogadores.id_servidor)
@@ -141,14 +141,14 @@ inner join penalidades on (jogadores.id_jogador = penalidades.id_jogador)
 inner join servidores on (servidores.id_servidor = jogadores.id_servidor)
 where tipo = 'Banimento';
 
-#Nome, motivo do banimento, tipo de banimento e o nome do jogo aonde os playes
+#Nome, motivo do banimento, tipo de banimento e o nome do jogo onde os playes
 #estavam quando tomaram banimento.
 
 select nickname, nivel, nome_jogo, mapa from jogadores
 inner join servidores on (servidores.id_servidor = jogadores.id_servidor)
 order by nivel desc;
 
-#Nome, nível, nome do jogo e mapa aonde se encontram os jogadores de maior nivel
+#Nome, nível, nome do jogo e mapa onde se encontram os jogadores de maior nivel
 #até o de menor nível.
 
 select nome_item, raridade, nickname from itens
