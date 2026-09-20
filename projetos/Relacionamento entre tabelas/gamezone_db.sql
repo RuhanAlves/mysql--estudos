@@ -120,7 +120,7 @@ inner join itens on (jogadores.id_jogador = itens.id_jogador)
 where raridade = 'Lendario';
 
 #Uma consulta que se parece com as outras, a única diferença é que como tenho que
-#buscar apenas os itens no qual a raridade de itens apenas Lendario, e eu uso um where pra isso.
+#buscar apenas os itens no qual a raridade de itens seja apenas Lendario.
 
 select nickname, nivel, nome_jogo, regiao from jogadores
 inner join servidores on (servidores.id_servidor = jogadores.id_servidor)
