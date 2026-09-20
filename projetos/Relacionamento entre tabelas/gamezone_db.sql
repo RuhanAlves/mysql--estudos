@@ -108,8 +108,12 @@ inner join servidores on (servidores.id_servidor = jogadores.id_servidor);
 select nickname, mapa, regiao from jogadores
 inner join servidores on (servidores.id_servidor = jogadores.id_servidor);
 
+#Nome, mapa e região de onde os jogadores se encontram.
+
 select nickname, nome_item from jogadores
 inner join itens on (jogadores.id_jogador = itens.id_jogador);
+
+#Nome e o nome do item que cada jogador tem.
 
 select nickname, nome_item, raridade from jogadores
 inner join itens on (jogadores.id_jogador = itens.id_jogador)
